@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação com butões</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        .animate__animated {
+    font-family: var(--font-animate);
+    font-size: 2rem;
+    text-align: center;
+    font-family: "Century Gothic";
+    color: #FFC107;
+    font-size: 50px;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background: #7952B3;
+  }
+  .middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .btn {
+    position: relative;
+    display: block;
+    color: white;
+    font-size: 18px;
+    font-family: "Times New Roman";
+    text-decoration: none;
+    margin: 30px 0;
+    border: 4px double #FFC107;
+    border-radius: 18px;
+    padding: 14px 60px;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 1s all ease;
+  }
+  .btn::before {
+    background: #FFC107;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    transition: all 0.6s ease;
+  }
+  
+  .btn1::before {
+    width: 0%;
+    height: 100%;
+  }
+  .btn1:hover::before {
+    width: 100%;
+  }
+  
+  .btn2::before {
+    width: 100%;
+    height: 0%;
+    transform: translate(-50%,-50%) rotate(45deg);
+  }
+  .btn2:hover::before{
+    height: 380%;
+  }
+  
+  .btn3 {
+    border-color: #FFC107;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #FFC107 inset, 0 0 0 0 #FFC107;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+  }
+  .btn3:hover {
+    box-shadow: 0 0 10px 0 #FFC107 inset, 0 0 10px 4px #FFC107;
+  }
+  
+  .btn4::before {
+    width: 100%;
+    height: 0%;
+  }
+  .btn4:hover::before {
+    height: 100%;
+  }
+    </style>
+</head>
+<body>
+    <h1 class="animate__animated animate__lightSpeedInRight">Animações com Butões</h1>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <div class="middle">
+      <a href="" class="btn btn1">Animação 1</a>
+      <a href="" class="btn btn2">Animação 2</a>
+      <a href="" class="btn btn3">Animação 3</a>
+      <a href="" class="btn btn4">Animação 4</a>
+    </div>
+</body>
+</html>
